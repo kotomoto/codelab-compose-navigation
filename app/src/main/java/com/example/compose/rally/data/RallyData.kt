@@ -102,6 +102,6 @@ object UserData {
     )
 
     fun getAccount(accountName: String?): Account {
-        return accounts.first { it.name == accountName }
+        return accounts.firstOrNull { it.name == accountName } ?: accounts.first()
     }
 }
